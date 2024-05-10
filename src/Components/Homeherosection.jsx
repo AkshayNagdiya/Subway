@@ -4,6 +4,7 @@ import img2 from '../assets/hero2.png'
 import Herotwo from './Herotwo';
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMenu } from '../features/Menu/MenuSlice'
+import { Link } from 'react-router-dom';
 
 
 const Homeherosection = () => {
@@ -33,10 +34,15 @@ const Homeherosection = () => {
   }
   return (
     <>
-      <div className='bg h-[100vh] bg-cover flex'>
-        <img className='w-fit p-10 h-5/6  top-20 left-20 ' src={img2} alt="" />
+      <div className='bg  h-auto md:h-[100vh] bg-cover md:flex'>
+        <img className='w-fit p-10 h-5/6  top-20 left-20 ' src={img2} alt="img" />
+        <span className='md:hidden relative left-10 bottom-2 text-white gap-2'>
+        <p>Order Now on </p>
+          <button className='bg-orange-500 hover:bg-orange-600 h-6 w-28 text-xs rounded-3xl my-2'><a href="https://www.swiggy.com/">SWIGGY</a></button><br />
+          <button className='bg-red-600 hover:bg-red-700 h-6 w-28 text-xs rounded-3xl'><a href="https://www.zomato.com/indore">ZOMATO</a></button><br />
+        </span>
       </div>
-      <div className='flex justify-center items-center p-12 font-extrabold font-[Merienda] md:text-[50px] lg:text-[60px]'><span style={{color:'#FECC06'}}> Chefs </span> <span style={{color:'#009947'}}> Special</span> </div>
+      <div className='flex justify-center items-center pt-8 md:p-12 font-extrabold font-[Merienda] text-3xl md:text-[50px] lg:text-[60px]'><span style={{color:'#FECC06'}}> Chefs </span> <span style={{color:'#009947'}}> Special</span> </div>
       <div className='container flex h-auto flex-wrap w-fit justify-center'>
         {
           products.slice(0,6).map(products => <Herotwo key={products.id} products={products}/>)
@@ -46,8 +52,8 @@ const Homeherosection = () => {
           <div className='p-8 flex justify-center bg-[#EDEDED]'>
           <iframe style={{width:'120vh' , height:'70vh' , borderRadius:'20px'}} src="https://www.youtube.com/embed/9KWjPD3r-fU?rel=0" title="Subway Hotsellers | Just point, pick and enjoy." allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className="video"></iframe>
           </div>
-          <div className='flex justify-items-center md:px-8 lg:px-32 text-center h-[80px] bg-white'>
-          <h5 className='flex py-4'>All rights reserved. SUBWAY® is a Registered Trademark of Subway IP LLC. ©2022 Subway IP LLC., and is licensed to Eversub India Private Limited under an exclusive master franchisee arrangement for the territory of the Republic of India.</h5>
+          <div className=' bg-white text-center py-6 md:text-xl font-semibold'>
+          <h5 className=''>All rights reserved. Akshay Nagdiya</h5>
           </div>
       </div>
     </>

@@ -35,22 +35,23 @@ const Menuitems = ({ products }) => {
   });
 
   return (
-    <div className="flex flex-col justify-center p-8 h-auto ">
-      <div className="bg-white  rounded-[50px] flex flex-col h-auto border-4 shadow-2xl shadow-slate-950">
+    <div className="flex flex-col my-4 md:my-0 justify-center md:p-8 h-auto w-[70vw] md:w-auto ">
+      <div className="bg-white  rounded-[30px]  md:rounded-[40px] flex flex-col h-auto border-4 shadow-2xl shadow-slate-950">
         <img
-          style={{ width: "400px", height: "400px" }}
+          // style={{ width: "400px", height: "400px" }}
+          className="max-h-[250px] md:max-h-[300px]"
           src={products.img}
-          alt=""
+          alt="img"
         />
-        <h1 className="p-2 flex justify-items-stretch text-[25px] font-semibold">
+        <h1 className="p-2 flex justify-items-stretch md:text-[25px] font-semibold">
           {products.name}
         </h1>
-        <span className="pt-4 flex justify-around ">
+        <span className="md:pt-4 flex justify-around text-xs md:text-base">
           <select
             onChange={(e) => {
               setBun(e.target.value);
             }}
-            className="block appearance-none w-[220px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block appearance-none md:w-[180px] bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-state"
           >
             <option value={0}>White Bun</option>
@@ -60,7 +61,7 @@ const Menuitems = ({ products }) => {
             onChange={(e) => {
               setCheese(e.target.value);
             }}
-            className="block appearance-none w-half bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-snug focus:outline-none focus:bg-white focus:border-gray-500"
+            className="block appearance-none w-half bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 md:pr-8 rounded leading-snug focus:outline-none focus:bg-white focus:border-gray-500"
             id="grid-state"
           >
             <option value={80}>Extra Cheese</option>
@@ -70,18 +71,18 @@ const Menuitems = ({ products }) => {
         <span className="flex items-center justify-between px-8 py-4">
           <span>
             <h1 className="font-semibold">{products.title}</h1>
-            <p className="text-green-800">
+            <p className="text-green-800 text-xs md:text-base">
               Price: {products.price + parseInt(bun) + parseInt(cheese)} Rs
             </p>
           </span>
           <button
             type="button"
-            className="btn bg-green-500  hover:bg-red-500  p-2 rounded-lg text-white curser-cell flex items-center"
+            className="btn text-xs md:text-base bg-green-500  hover:bg-red-500  p-2 rounded-lg text-white curser-cell flex items-center"
             onClick={handleadd}
           >
             {" "}
-            Add to cart{" "}
-            <span className="p-2">
+            <p className="hidden md:block">Add to cart</p>{" "}
+            <span className="md:p-2">
               <BsCart />
             </span>{" "}
           </button>
