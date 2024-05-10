@@ -21,16 +21,16 @@ const Cart = () => {
   }
 
   return (
-    <div className='flex justify-between flex-wrap px-10'>
+    <div className='lg:flex justify-between flex-wrap md:px-10'>
 
-      <div className='flex flex-col w-[50%] h-auto '>
+      <div className='flex flex-col lg:w-[50%] h-auto '>
       {
         Cartitems.map( (cartitem)=><Cartitem key={Cartitem.id} cartitem={cartitem}  /> )
       }
     
       </div>
 
-      <div className='flex flex-col flex-wrap w-[50%] h-auto'>
+      <div className='flex flex-col flex-wrap lg:min-w-[50%] h-auto px-2'>
         <div className='flex flex-col flex-wrap justify-center mt-10  h-auto '>
           <div className='bg-gray-100   rounded-xl flex justify-between h-auto border-4'>
             <span className='flex flex-col items-center justify-between px-8 py-4 w-full'>

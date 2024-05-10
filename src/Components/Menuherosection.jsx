@@ -53,7 +53,7 @@ const Menuherosection = () => {
         <img src={img4} className="md:hidden py-10 w-3/4 pl-4" alt="img" />
         <div className="flex flex-row justify-center">
           <div className="grid grid-cols-3 gap-6 justify-center">
-            <div className="flex pl-32 ">
+            <div className="flex pl-4 w-60 md:w-96 ">
               <img src={img2} alt="" className="flex justify-center" />
             </div>
           </div>

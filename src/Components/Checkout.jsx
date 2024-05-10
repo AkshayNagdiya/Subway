@@ -9,9 +9,9 @@ const Checkout = () => {
 
 
   return (
-    <div className='flex justify-center w-full bg-gray-0 md:flex md:flex-col md:justify-center md:items-center lg:flex lg:flex-row'>
+    <div className='md:flex justify-center w-full bg-gray-0 md:flex-col md:justify-center md:items-center lg:flex lg:flex-row'>
 
-        <div className='w-[35%] md:w-[80%] bg-red-100 p-10 mt-14 flex flex-col  justify-between h-full lg:w-[40%] lg:justify-start'>
+        <div className='md:w-[80%] bg-red-100 p-10 mt-14 flex flex-col  justify-between h-full lg:w-[40%] lg:justify-start'>
             <div className='flex justify-between flex-col'>
             {
                 Cartitems.map((item)=> {
