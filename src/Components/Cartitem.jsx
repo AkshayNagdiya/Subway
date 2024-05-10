@@ -15,6 +15,7 @@ const Cartitem = ({ cartitem }) => {
     qty > 1 ? dispatch(decrease({ id })) : (qty = 0);
     toast.error(`Decrease ${name}`, {
       position: "top-center",
+      autoClose: 3000,
     });
   };
 
@@ -31,6 +32,7 @@ const Cartitem = ({ cartitem }) => {
     dispatch(remove(id));
     toast.error(`Removed ${name}`, {
       position: "top-center",
+      autoClose: 3000,
     });
   };
 

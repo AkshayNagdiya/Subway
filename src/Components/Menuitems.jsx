@@ -26,7 +26,8 @@ const Menuitems = ({ products }) => {
       })
     );
     toast.success(`Add ${name}`, {
-      position: "top-center"
+      position: "top-center",
+      autoClose: 3000,
     })
   };
 
@@ -71,7 +72,7 @@ const Menuitems = ({ products }) => {
         <span className="flex items-center justify-between px-8 py-4">
           <span>
             <h1 className="font-semibold">{products.title}</h1>
-            <p className="text-green-800 text-xs md:text-base">
+            <p className="text-green-800 text-lg md:text-base">
               Price: {products.price + parseInt(bun) + parseInt(cheese)} Rs
             </p>
           </span>
@@ -82,7 +83,8 @@ const Menuitems = ({ products }) => {
           >
             {" "}
             <p className="hidden md:block">Add to cart</p>{" "}
-            <span className="md:p-2">
+            <p className="md:hidden pl-2">Add</p>
+            <span className=" px-4 md:p-2">
               <BsCart />
             </span>{" "}
           </button>
