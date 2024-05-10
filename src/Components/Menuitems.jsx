@@ -72,7 +72,7 @@ const Menuitems = ({ products }) => {
         <span className="flex items-center justify-between px-8 py-4">
           <span>
             <h1 className="font-semibold">{products.title}</h1>
-            <p className="text-green-800 text-lg md:text-base">
+            <p className="text-green-800 text-sm md:text:lg md:text-base">
               Price: {products.price + parseInt(bun) + parseInt(cheese)} Rs
             </p>
           </span>
